@@ -5,5 +5,3 @@ for i in range(0, 100):
     print (i, end="")
     if (i != 99):
         print(end=", ")
-    elif(i == 99):
-
