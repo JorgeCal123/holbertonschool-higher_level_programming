@@ -13,8 +13,10 @@ int check_cycle(listint_t *list)
 	{
 		copy = copy->next;
 		if (list->n == copy->n)
+		{
+			break;
 			return (1);
-
+		}
 	}
 	return (0);
 }
