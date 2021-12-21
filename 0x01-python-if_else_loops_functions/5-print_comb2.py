@@ -2,6 +2,8 @@
 for i in range(0, 100):
     if (i < 10):
         print(0, end="")
-    print (i, end="")
+    print ("{:d}".format(i), end="")
     if (i != 99):
         print(end=", ")
+    elif(i == 99):
+        print()
