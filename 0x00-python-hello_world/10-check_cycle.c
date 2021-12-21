@@ -9,12 +9,12 @@ int check_cycle(listint_t *list)
 	listint_t *copy = list;
 
 	copy = copy->next;
-	while (copy->next)
+	while (copy && copy->next)
 	{
 		copy = copy->next;
 		if (list->n == copy->n)
 		{
-			break;
+
 			return (1);
 		}
 	}
