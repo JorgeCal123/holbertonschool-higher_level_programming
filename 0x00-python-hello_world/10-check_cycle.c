@@ -8,6 +8,9 @@ int check_cycle(listint_t *list)
 {
 	listint_t *copy = list;
 
+	if (list == NULL)
+		return (0);
+
 	copy = copy->next;
 	while (copy && copy->next)
 	{
