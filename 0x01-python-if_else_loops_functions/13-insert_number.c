@@ -9,9 +9,9 @@
  * Return: linked list updated
  */
 listint_t *insert_node(listint_t **head, int number)
-{	
-	listint_t *original = *head;
-	listint_t *new_n; 
+{
+	listint_t *original;
+	listint_t *new_n;
 	listint_t *before;
 	listint_t *temp_Next;
 
@@ -26,6 +26,7 @@ listint_t *insert_node(listint_t **head, int number)
 		return (new_n);
 	}
 
+	original = *head;
 	if (original->n >= number)
 	{
 		new_n->n = number;
@@ -33,16 +34,16 @@ listint_t *insert_node(listint_t **head, int number)
 		*head = new_n;
 		return (new_n);
 	}
-	while(original)
+	while (original)
 	{
-		if(original->n < number)
+		if (original->n < number)
 			before = original;
-	original = original->next; 
+	original = original->next;
 	}
 	temp_Next = before->next;
 	new_n->n = number;
 	new_n->next = temp_Next;
 	before->next = new_n;
 
-	return(original);
+	return (original);
 }
