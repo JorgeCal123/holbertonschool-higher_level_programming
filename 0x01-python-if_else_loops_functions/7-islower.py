@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 def islower(c):
-    for i in range(ord('a'), ord('z') + 1):
-        if (c == chr(i)):
-            return (True)
-    return (False)
+    if ord(c) >= ord('a') and ord(c) <= ord('z'):
+        return True
+    else:
+        return False
