@@ -2,4 +2,6 @@
 if __name__ == "__main__":
 
     import calculator_1 as f
-    print("10 + 5 = {:d}\n10 - 5 = {:d}\n10 * 5 = {:d}\n10 / 5 = {:d}".format(f.add(10, 5), f.sub(10, 5), f.mul(10, 5), f.div(10, 5)))
+    a = 10
+    b = 5
+    print("{} + {} = {}\n{} - {} = {}\n{} * {} = {}\n{} / {} = {}".format(a, b,f.add(a, b),a, b, f.sub(a, b), a, b, f.mul(a, b), a, b, f.div(a, b)))
