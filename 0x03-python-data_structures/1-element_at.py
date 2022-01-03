@@ -1,8 +1,8 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):
     if (idx < 0):
-        return
+        return None
     elif (len(my_list) < idx):
-        return
+        return None
     else:
         return(my_list[idx])
