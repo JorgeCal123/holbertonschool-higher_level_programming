@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 def add_tuple(tuple_a=(), tuple_b=()):
 
-    new_tuple = []
     l1 = list(tuple_a)
     l2 = list(tuple_b)
     while (len(l1) != 2 or len(l2) != 2):
@@ -10,7 +9,5 @@ def add_tuple(tuple_a=(), tuple_b=()):
         else:
             l1.append(0)
 
-    for i in range(len(l1)):
-        suma = l1[i] + l2[i]
-        new_tuple.append(suma)
+    new_tuple = (l1[0] + l2[0], l1[1] + l2[1])
     return new_tuple
