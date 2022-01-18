@@ -2,6 +2,8 @@
 
 
 """Class Square"""
+
+
 class Square:
     """method Constructor"""
     def __init__(self, size):
