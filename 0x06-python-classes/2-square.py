@@ -4,15 +4,18 @@
 
 class Square:
 
+    """Method constructor"""
     def __init__(self, size=0):
         self.size = size
 
 
+    """Method constructor"""
     @property
     def size(self):
         return self._size
 
 
+    """Method constructor"""
     @size.setter
     def size(self, size):
         if type(size) != int:
