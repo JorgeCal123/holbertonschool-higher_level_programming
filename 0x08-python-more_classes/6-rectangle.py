@@ -4,11 +4,14 @@
 
 
 class Rectangle:
+    number_of_instances = 0
+
     """Rectangle class defined by width and height."""
 
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
+        Rectangle.number_of_instances += 1
 
     def area(self):
         return (self.height * self.width)
@@ -35,6 +38,8 @@ class Rectangle:
         return "Rectangle({:d}, {:d})".format(self.width, self.height)
 
     def __del__(self):
+        if Rectangle.number_of_instances >= 0:
+            Rectangle.number_of_instances -= 1
         print("Bye rectangle...")
 
     @property
@@ -60,3 +65,4 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self._height = value
+
