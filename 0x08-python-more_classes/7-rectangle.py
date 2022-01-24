@@ -5,6 +5,7 @@
 
 class Rectangle:
     number_of_instances = 0
+    print_symbol = "#"
 
     """Rectangle class defined by width and height."""
 
@@ -29,7 +30,7 @@ class Rectangle:
 
         for i in range(self.height):
             for j in range(self.width):
-                rectangle = rectangle + "#"
+                rectangle = rectangle + str(self.print_symbol)
             if (i < self.height - 1):
                 rectangle = rectangle + "\n"
         return rectangle
