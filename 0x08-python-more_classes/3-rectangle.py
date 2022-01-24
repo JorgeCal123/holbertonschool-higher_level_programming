@@ -20,13 +20,16 @@ class Rectangle:
 
     def __str__(self):
         rectangle = ""
+
+        if (self.height == 0 or self.width == 0):
+            return rectangle
+
         for i in range(self.height):
             for j in range(self.width):
                 rectangle = rectangle + "#"
             if (i < self.height - 1):
                 rectangle = rectangle + "\n"
         return rectangle
-        
 
     @property
     def width(self):
@@ -51,4 +54,3 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self._height = value
-
