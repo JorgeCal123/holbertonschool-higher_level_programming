@@ -6,8 +6,8 @@
 class Rectangle:
     """Rectangle class defined by width and height."""
     def __init__(self, width=0, height=0):
-        self.height = height
         self.width = width
+        self.height = height
 
     @property
     def width(self):
