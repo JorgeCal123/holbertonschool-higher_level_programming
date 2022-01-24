@@ -7,4 +7,4 @@ class Rectangle:
     """declaration pass"""
 
 
-    pass
+pass

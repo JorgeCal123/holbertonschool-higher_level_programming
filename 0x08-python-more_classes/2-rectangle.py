@@ -5,9 +5,18 @@
 
 class Rectangle:
     """Rectangle class defined by width and height."""
+
     def __init__(self, width=0, height=0):
         self.height = height
         self.width = width
+
+    def area(self):
+        return (self.height * self.width)
+
+    def perimeter(self):
+        if (self.height == 0 or self.width == 0):
+            return 0
+        return 2 * (self.height + self.width)
 
     @property
     def width(self):
