@@ -1,0 +1,33 @@
+
+import text_indentation
+
+    >>> text_indentation = __import__('5-text_indentation').text_indentation
+
+Basic function
+    >>> text_indentation(("function? text identation: run"))
+    function?
+    <BLANKLINE>
+    text identation:
+    <BLANKLINE>
+    run
+
+empty string
+    >>> text_indentation("")
+    
+nothing input
+    text_indentation()
+    Traceback (most recent call last):
+    ...
+    TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+None input
+    >>> text_indentation(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
+
+another input
+    >>> text_indentation(12)
+    Traceback (most recent call last):
+    ...
+    TypeError: text must be a string
