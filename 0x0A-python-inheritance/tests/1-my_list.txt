@@ -1,0 +1,32 @@
+Import the class:
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Basic MyList usage
+    >>> my_list = MyList()
+    >>> my_list
+    []
+
+add element to Mylist
+    >>> my_list.append(0)
+    >>> my_list.append(-2)
+    >>> my_list.append(5)
+    >>> my_list
+    [0, -2, 5]
+
+method print_sorted
+    >>> my_list.print_sorted()
+    [-2, 0, 5]
+
+print again the list
+    >>> my_list
+    [0, -2, 5]
+
+add another element (String)
+    >>> my_list = MyList("punto 1")
+
+    >>> my_list
+    ['p', 'u', 'n', 't', 'o', ' '. '1']
+
+    >>> my_list.print_sorted()
+    [' ', '1', 'n', 'o', 'p', 't', 'u']
