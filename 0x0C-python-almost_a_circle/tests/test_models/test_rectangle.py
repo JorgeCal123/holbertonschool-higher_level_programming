@@ -49,5 +49,9 @@ class TestRectangle(unittest.TestCase):
         with self.assertRaisesRegex(ValueError, "y must be >= 0"):
             rectangle4 = Rectangle(5, 4, 3, -6)
 
+    def test_calculate_area_case_1(self):
+        rectangle5 = Rectangle(3, 2)
+        self.assertEqual(rectangle5.area(), 6)
+
 if __name__ == "__main__":
     unittest.main()
