@@ -63,6 +63,13 @@ class TestRectangle(unittest.TestCase):
             output = buf.getvalue()
         self.assertEqual(output, '##\n##\n')
 
+    def test_display_case_2(self):
+        rectangle7 = Rectangle(2, 3, 1, 4)
+        with io.StringIO() as buf, redirect_stdout(buf):
+            rectangle7.display()
+            output = buf.getvalue()
+        self.assertEqual(output, '\n\n\n\n ##\n ##\n ##\n')
+
     def test_str_case_1(self):
         rectangle6 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(Rectangle.__str__(rectangle6), "[Rectangle] (12) 2/1 - 4/6")
