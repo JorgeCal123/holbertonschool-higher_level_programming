@@ -21,10 +21,9 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
+        print("\n" * self.__y, end='')
         for i in range(self.height):
-            for j in range(self.width):
-                print("#", end="")
-            print()
+            print("{}{}".format(" " * self.x, "#" * self.width))
 
     def __str__(self):
         return ("[Rectangle] ({}) {}/{} - {}/{}".format(self.id, self.x, self.y, self.width, self.height))

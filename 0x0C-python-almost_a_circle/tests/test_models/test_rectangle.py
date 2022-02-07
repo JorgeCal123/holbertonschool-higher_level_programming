@@ -2,6 +2,9 @@
 """Unittest class Rectangle"""
 
 import unittest
+import io
+from contextlib import redirect_stdout
+
 from models.rectangle import Rectangle
 
 class TestRectangle(unittest.TestCase):
@@ -52,6 +55,13 @@ class TestRectangle(unittest.TestCase):
     def test_calculate_area_case_1(self):
         rectangle5 = Rectangle(3, 2)
         self.assertEqual(rectangle5.area(), 6)
+
+    def test_display_case_1(self):
+        rectangle6 = Rectangle(2, 2)
+        with io.StringIO() as buf, redirect_stdout(buf):
+            rectangle6.display()
+            output = buf.getvalue()
+        self.assertEqual(output, '##\n##\n')
 
     def test_str_case_1(self):
         rectangle6 = Rectangle(4, 6, 2, 1, 12)
