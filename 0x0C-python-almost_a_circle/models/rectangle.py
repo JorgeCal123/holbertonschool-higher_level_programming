@@ -56,7 +56,7 @@ class Rectangle(Base):
                 self.x = kwargs["x"]
             if 'y' in kwargs:
                 self.y = kwargs["y"]
-            
+
     @property
     def width(self):
         """get width"""
