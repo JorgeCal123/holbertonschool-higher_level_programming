@@ -74,7 +74,7 @@ class TestRectangle(unittest.TestCase):
         rectangle8 = Rectangle(4, 6, 2, 1, 12)
         self.assertEqual(Rectangle.__str__(rectangle8), "[Rectangle] (12) 2/1 - 4/6")
 
-    def test_update(self):
+    def test_update_case_1(self):
         rectangle9 = Rectangle(10, 10, 10, 10)
         rectangle9.update(89, 2, 3, 4, 6)
         self.assertEqual(rectangle9.id, 89)
@@ -82,6 +82,17 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle9.height, 3)
         self.assertEqual(rectangle9.x, 4)
         self.assertEqual(rectangle9.y, 6)
+
+    def test_update_case_1(self):
+        rectangle10 = Rectangle(10, 10, 10, 10)
+        rectangle10.update(x=1, height=2, y=3, width=4, id=89)
+        self.assertEqual(rectangle10.id, 89)
+        self.assertEqual(rectangle10.width, 4)
+        self.assertEqual(rectangle10.height, 2)
+        self.assertEqual(rectangle10.x, 1)
+        self.assertEqual(rectangle10.y, 3)
+
+
 
 if __name__ == "__main__":
     unittest.main()
