@@ -57,6 +57,10 @@ class Rectangle(Base):
             if 'y' in kwargs:
                 self.y = kwargs["y"]
 
+    def to_dictionary(self):
+        return dict(x=self.x, y=self.y, id=self.id,
+                    height=self.height, width=self.width)
+
     @property
     def width(self):
         """get width"""
