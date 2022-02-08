@@ -33,3 +33,10 @@ class Base:
                 dic.append(cls.to_dictionary(i))
         with open(cls.__name__ + ".json", "w") as file:
             file.write(cls.to_json_string(dic))
+
+    @staticmethod
+    def from_json_string(json_string):
+        "metohd from_json_string"
+        if json_string is None or len(json_string) == 0:
+            return []
+        return (json.loads(json_string))
