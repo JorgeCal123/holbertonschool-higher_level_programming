@@ -1,12 +1,12 @@
 #!/usr/bin/python3
+
+"""Unittest classes"""
 import unittest
 from models.base import Base
 
-"""Unittest classes"""
 
 class TestSquare(unittest.TestCase):
     """TestSquare"""
-
 
     def test_base(self):
         base1 = Base(10)
