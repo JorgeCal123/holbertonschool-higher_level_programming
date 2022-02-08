@@ -92,7 +92,10 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(rectangle10.x, 1)
         self.assertEqual(rectangle10.y, 3)
 
-
+    def test_to_dictionary(self):
+        rectangle11 = Rectangle(10, 8, 3, 5)
+        self.assertDictEqual(rectangle11.to_dictionary(),
+                {'height': 8, 'id': 17, 'width': 10, 'x': 3, 'y': 5})
 
 if __name__ == "__main__":
     unittest.main()
