@@ -15,7 +15,7 @@ class Square(Rectangle):
         return ("[Square] ({}) {}/{} - {}".format(
             self.id, self.x, self.y, self.width))
 
-    def update(self, *args, **kwargs)
+    def update(self, *args, **kwargs):
         """method upsate"""
         if args:
             for i in range(len(args)):
