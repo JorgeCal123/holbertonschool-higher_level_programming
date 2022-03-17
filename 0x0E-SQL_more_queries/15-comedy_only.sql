@@ -1,3 +1,7 @@
--- script that lists the number of records with the same score in
--- the table second_table of the database hbtn_0c_0 in your MySQL server.
-SELECT score, COUNT(*) AS number FROM second_table GROUP BY score ORDER BY number DESC;
+--  lists all Comedy shows in the database hbtn_0d_tvshows.
+SELECT tv_shows.title
+FROM tv_show_genres
+JOIN tv_shows ON tv_show_genres.show_id = tv_shows.id
+JOIN tv_genres ON tv_show_genres.genre_id = tv_genres.id
+WHERE tv_genres.name = 'Comedy'
+ORDER BY tv_shows.title;
