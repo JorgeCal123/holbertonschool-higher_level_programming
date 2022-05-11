@@ -11,6 +11,6 @@ Base = declarative_base()
 class State(Base):
     """class of a state"""
     __tablename__ = 'states'
+    cities = relationship('City', cascade='all, delete')
     id = Column(Integer, primary_key=True, autoincrement=True, nullable=False)
     name = Column(String(128), nullable=False)
-    cities = relationship('City', cascade='all, delete')
